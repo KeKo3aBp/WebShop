@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мой онлайн-магазин</h1>
+             <nav>
+                <a href="index.html">Главная</a>
+                <a href="products.html">Товары</a>
+                <a href="about.html">О нас</a>
+                <a href="profile.html" class="active">Личный кабинет</a>
+                <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="profile-page">
+            <div class="container">
+                <h2>Личный кабинет</h2>
+                <div id="profile-info">
+                    <!-- Здесь будет информация о пользователе -->
+                   <div id="user-details">
+                      <div id="profile-photo-container">
+                          <img id="profile-photo" src="" alt="Фото профиля">
+                        <button id="upload-photo-button">Загрузить фото</button>
+                      </div>
+                    </div>
+
+                </div>
+                <h3>Информация о пользователе</h3>
+                <div id="profile-settings">
+                    <div id="profile-settings">
+                        <label for="user-lastname">Фамилия:</label>
+                        <input type="text" id="user-lastname" >
+                    
+                        <label for="user-firstname">Имя:</label>
+                        <input type="text" id="user-firstname">
+                    
+                        <label for="user-patronymic">Отчество:</label>
+                        <input type="text" id="user-patronymic">
+                    
+                        <label for="user-phone">Номер телефона:</label>
+                        <input type="tel" id="user-phone">
+                    
+                        <label for="user-city">Город:</label>
+                        <input type="text" id="user-city">
+                    
+                        <button id="save-user-details">Сохранить</button>
+                    </div>
+               </div>
+
+
+                <h3>История заказов</h3>
+                <div id="order-history">
+                     <!-- Здесь будут отображаться заказы -->
+                    <p>Заказов пока нет.</p>
+                </div>
+                <button id="logout-button">Выйти</button>
+            </div>
+        </section>
+        <input type="file" id="photo-upload-input" style="display: none;" accept="image/*">
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мой магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>

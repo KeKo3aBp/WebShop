@@ -1,0 +1,418 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Очень светло-голубой фон */
+    color: #333; /* Темно-серый текст */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Стандартный синий цвет ссылок */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Темно-синий при наведении */
+}
+
+/* Стили для шапки */
+header {
+    background-color: #fff; /* Белый фон */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Для фиксации header на верху */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #003366; /* Темно-синий для заголовка */
+}
+
+header nav a {
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Стили для основных секций */
+section {
+    padding: 40px 0;
+}
+
+#hero {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #e6f7ff; /* Светло-голубой фон для hero */
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+#hero .button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero .button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для основных секций */
+section {
+    padding: 40px 0;
+}
+
+#hero {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #e6f7ff; /* Светло-голубой фон для hero */
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+#hero .button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero .button:hover {
+    background-color: #0056b3;
+}
+
+
+#products {
+     background-color: #fff;
+     display: flex; /* Используем flexbox для общего контейнера */
+      align-items: center; /* Выравнивание элементов по центру вертикально */
+    justify-content: center; /* Выравнивание элементов по центру горизонтально */
+}
+
+
+#products .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box; /* для правильного расчета ширины */
+}
+
+
+#products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+#products .product-grid {
+    display: grid; /* Используем grid для сетки товаров */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматическая ширина колонок */
+    gap: 20px; /* Расстояние между товарами */
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    display: flex; /* используем flexbox для выравнивания контента */
+     flex-direction: column; /* контент сверху вниз */
+    justify-content: space-between; /* Распределяет контент по вертикали*/
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.product .price {
+    display: block;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+/* Стили для секций "О нас" и "Контакты" */
+#about, #contact {
+    background-color: #f0f8ff;
+}
+
+#about h2, #contact h2 {
+     text-align: center;
+     margin-bottom: 30px;
+     color: #003366;
+}
+
+/* Стили для модального окна корзины */
+.modal {
+    display: none; /* изначально скрыто */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для секции корзины */
+#cart-page {
+    padding: 40px 0;
+    background-color: #fff; /* Белый фон для страницы корзины */
+}
+#cart-page h2 {
+    text-align: center;
+     margin-bottom: 30px;
+     color: #003366;
+}
+
+#cart-page .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#cart-page #cart-items {
+    margin-bottom: 20px;
+}
+
+#cart-page #cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#cart-page #cart-total {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+#cart-page #checkout-button {
+   background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#cart-page #checkout-button:hover {
+    background-color: #0056b3;
+}
+
+#checkout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Стили для секции настроек профиля */
+#profile-settings {
+    margin-top: 20px;
+}
+#profile-settings label {
+    display: block; /* Переносит label на новую строку */
+    margin-bottom: 5px; /* Отступ снизу label */
+    font-weight: bold;
+    color: #003366; /* Темно-синий для label */
+}
+
+#profile-settings input,
+#profile-settings textarea {
+    width: calc(100% - 12px); /* Убираем паддинг из общей ширины */
+    padding: 8px;
+    margin-bottom: 15px; /* Отступ снизу input/textarea */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+     box-sizing: border-box; /* для правильного расчета ширины */
+}
+
+#profile-settings button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   display: block;
+   margin: 10px auto;
+}
+
+#profile-settings button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для секции "О нас" */
+#about-page {
+    padding: 40px 0;
+     background-color: #f0f8ff;
+}
+#about-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366; /* Темно-синий для заголовка */
+}
+#about-page .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#about-page .developers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#about-page .developer {
+    width: calc(30% - 20px);
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#about-page .developer h3 {
+    margin-bottom: 10px;
+    color: #003366; /* Темно-синий для имени */
+}
+
+#about-page .developer a {
+     margin: 0 5px; /* Отступ между ссылками */
+}
+/*Адаптивный дизайн*/
+@media (max-width: 768px) {
+    #about-page .developer {
+         width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    #about-page .developer {
+          width: 100%;
+    }
+}
+
+#about-page .developer-photo {
+    width: 150px; /* ширина фото */
+    height: 150px;  /* высота фото */
+    border-radius: 50%; /* круглая форма */
+     object-fit: cover; /* обрезаем фото, сохраняя пропорции*/
+    margin-bottom: 10px;
+    display: block; /* делаем блочным для центрирования*/
+    margin-left: auto; /* центрируем по горизонтали*/
+     margin-right: auto;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление товарами</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <h1>Мой онлайн-магазин</h1>
+              <nav>
+                <a href="index.html">Главная</a>
+                <a href="products.html" class="active">Товары</a>
+                 <a href="about.html">О нас</a>
+                <a href="profile.html">Личный кабинет</a>
+                <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+         <section id="product-management">
+            <div class="container">
+                 <h2>Управление товарами</h2>
+                 <div id="product-list">
+                    <!-- Здесь будут отображаться товары -->
+                </div>
+
+                <h3>Добавить новый товар</h3>
+                <form id="add-product-form">
+                   <label for="product-name">Название:</label>
+                    <input type="text" id="product-name" required>
+
+                     <label for="product-description">Описание:</label>
+                    <textarea id="product-description" required></textarea>
+
+                    <label for="product-price">Цена:</label>
+                    <input type="number" id="product-price" required step="0.01">
+
+                    <label for="product-image">URL изображения:</label>
+                   <input type="text" id="product-image" required>
+
+                    <button type="submit">Добавить товар</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+           <p>&copy; 2024 Мой магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина товаров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <h1>Мой онлайн-магазин</h1>
+              <nav>
+                <a href="index.html">Главная</a>
+                <a href="products.html">Товары</a>
+                <a href="about.html">О нас</a>
+                <a href="profile.html">Личный кабинет</a>
+                <a href="cart.html" class="active">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cart-page">
+             <div class="container">
+                <h2>Корзина</h2>
+                <div id="cart-items">
+                    <p>Корзина пуста</p>
+                </div>
+                <div id="cart-total">Итого: $0.00</div>
+               <button id="checkout-button" disabled>Оформить заказ</button>
+          </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мой магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
